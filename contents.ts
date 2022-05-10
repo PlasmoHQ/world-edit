@@ -1,5 +1,6 @@
+import { Storage } from "@p1asm0/storage"
+
 import { StorageKey } from "~core/message"
-import { Storage } from "~core/storage"
 
 const storage = new Storage()
 

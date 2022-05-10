@@ -1,7 +1,7 @@
+import { useStorage } from "@p1asm0/storage"
 import { useEffect, useState } from "react"
 
 import { StorageKey } from "~core/message"
-import { useStorage } from "~core/storage"
 
 function IndexPopup() {
   const [enable, setEnable] = useState(false)
