@@ -1,4 +1,4 @@
-import { useStorage } from "@p1asm0/storage"
+import { useStorage } from "@plasmohq/storage"
 import { useEffect, useState } from "react"
 
 import { StorageKey } from "~core/message"

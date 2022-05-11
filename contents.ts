@@ -1,4 +1,4 @@
-import { Storage } from "@p1asm0/storage"
+import { Storage } from "@plasmohq/storage"
 
 import { StorageKey } from "~core/message"
 
@@ -14,6 +14,8 @@ window.addEventListener("load", async () => {
   }
 })
 
-chrome.storage.onChanged.addListener((obj) => {
-  document.designMode = obj[StorageKey.DesignMode].newValue
+storage.watch({
+  [StorageKey.DesignMode]: (change) => {
+    document.designMode = change.newValue
+  }
 })
