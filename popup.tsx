@@ -6,12 +6,12 @@ import { StorageKey } from "~core/message"
 function IndexPopup() {
   const [enable, setEnable] = useState(false)
 
-  const designMode = useStorage(StorageKey.DesignMode, (v) => {
+  const [, setDesignMode] = useStorage(StorageKey.DesignMode, (v) => {
     setEnable(v === "on")
   })
 
   useEffect(() => {
-    designMode.persist(enable ? "on" : "off")
+    setDesignMode(enable ? "on" : "off")
   }, [enable])
 
   return (
